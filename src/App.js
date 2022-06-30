@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import Colors from "./components/Colors";
 import { useState } from "react";
@@ -10,12 +10,12 @@ function App() {
     let n = (Math.random() * 0xfffff * 1000000).toString(16);
     return "#" + n.slice(0, 6);
   };
-  let somecolor = random_hex_color_code();
+  
   let arr = [0.2, 0.4, 0.6, 0.8, 0.9, 1];
   let bg = random_hex_color_code();
   return (
     <div className="page">
-      <h1>color palette generator</h1>
+      <h1>palette generator</h1>
       <button onClick={(e) => setColor({ bg })}>generate</button>
       <div className="container">
         {arr.map((elm) => (
